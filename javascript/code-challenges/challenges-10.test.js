@@ -11,7 +11,7 @@ function returnTen(str){
   const charArray = str.split('');
   const lastTen = charArray.splice(-10);
   return lastTen;
-  // Solution code here...
+  // Solution code here.......
 }
 
 /* ------------------------------------------------------------------------------------------------
