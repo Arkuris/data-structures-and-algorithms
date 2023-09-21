@@ -5,7 +5,7 @@
 ### TABLE OF CONTENTS!
 [Link to README Array Reverse](./array-reverse/README.md)
 [Link to README Array Insert Shift](./array-insert-shift/README.md)
-
+[Link to README Array Binary-Search](./array-binary-search/README.md)
 
 ### Folder and Challenge Setup
 
