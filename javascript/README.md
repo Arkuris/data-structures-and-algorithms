@@ -6,7 +6,8 @@
 [Link to README Array Reverse](./array-reverse/README.md)
 [Link to README Array Insert Shift](./array-insert-shift/README.md)
 [Link to README Array Binary-Search](./array-binary-search/README.md)
-[Link to README Linked-List](/linked-list/index.js)
+[Link to README Linked-List CODE](/linked-list/index.js)
+[Link to README Linked-List Readme](/linked-list/README.md)
 
 ### Folder and Challenge Setup
 
