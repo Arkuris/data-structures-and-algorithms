@@ -54,6 +54,40 @@ class LinkedList {
     }
     current.next = newNode;
   }
+
+  insertBefore(value, newValue) {
+    let newNode = new Node(newValue);
+    if (!this.head) return;
+
+    if (this.head.value === value) {
+      newNode.next = this.head;
+      this.head = newNode;
+      return;
+    }
+
+    let current = this.head;
+    while (current.next && current.next.value !== value) {
+      current = current.next;
+    }
+
+    if (current.next) {
+      newNode.next = current.next;
+      current.next = newNode;
+    }
+  }
+
+  insertAfter(value, newValue) {
+    let newNode = new Node(newValue);
+    let current = this.head;
+    while (current && current.value !== value) {
+      current = current.next;
+    }
+
+    if (current) {
+      newNode.next = current.next;
+      current.next = newNode;
+    }
+  }
 }
 
 let survivalRope = new LinkedList();
