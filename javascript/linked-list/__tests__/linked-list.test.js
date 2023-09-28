@@ -47,7 +47,39 @@ describe('Linked List', () => {
     list.insertAfter('first', 'second');
     expect(list.to_string()).toBe('{ first } -> { second } -> NULL');
   });
+  
+  it('Can successfully zip two linked lists', () => {
+    let list1 = new LinkedList();
+    list1.append('a1');
+    list1.append('a2');
+    list1.append('a3');
 
+    let list2 = new LinkedList();
+    list2.append('b1');
+    list2.append('b2');
+    list2.append('b3');
+
+    list1.zipLists(list2);
+
+    expect(list1.to_string()).toBe('{ a1 } -> { b1 } -> { a2 } -> { b2 } -> { a3 } -> { b3 } -> NULL');
+  });
+
+  it('Can handle zipping when one list is shorter than the other', () => {
+    let list1 = new LinkedList();
+    list1.append('a1');
+    list1.append('a2');
+
+    let list2 = new LinkedList();
+    list2.append('b1');
+    list2.append('b2');
+    list2.append('b3');
+    list2.append('b4');
+
+    list1.zipLists(list2);
+
+    expect(list1.to_string()).toBe('{ a1 } -> { b1 } -> { a2 } -> { b2 } -> { b3 } -> { b4 } -> NULL');
+  });
+  
   it('Can successfully retrieve the kth element from the end of the linked list', () => {
     let list = new LinkedList();
     list.append('first');
