@@ -1,7 +1,5 @@
 'use strict';
 
-'use strict';
-
 const LinkedList = require('../index');
 
 describe('Linked List', () => {
@@ -49,4 +47,27 @@ describe('Linked List', () => {
     list.insertAfter('first', 'second');
     expect(list.to_string()).toBe('{ first } -> { second } -> NULL');
   });
+
+  it('Can successfully retrieve the kth element from the end of the linked list', () => {
+    let list = new LinkedList();
+    list.append('first');
+    list.append('second');
+    list.append('third');
+    list.append('fourth');
+
+    expect(list.kthFromEnd(0)).toBe('fourth');
+    expect(list.kthFromEnd(1)).toBe('third');
+    expect(list.kthFromEnd(2)).toBe('second');
+    expect(list.kthFromEnd(3)).toBe('first');
+  });
+
+  it('Returns null for out of range k values', () => {
+    let list = new LinkedList();
+    list.append('first');
+    list.append('second');
+
+    expect(list.kthFromEnd(5)).toBeNull(); // k is larger than the length of the list
+    expect(list.kthFromEnd(-1)).toBeNull(); // negative k value
+  });
+
 });
