@@ -88,6 +88,32 @@ class LinkedList {
       current.next = newNode;
     }
   }
+  zipLists(list2) {
+    if (!this.head) return list2;
+    if (!list2.head) return this;
+
+    let current1 = this.head;
+    let current2 = list2.head;
+    let previous1 = null;
+
+    while (current1 && current2) {
+      let temp1 = current1.next;
+      let temp2 = current2.next;
+
+      current1.next = current2;
+      current2.next = temp1;
+
+      previous1 = current1;
+      current1 = temp1;
+      current2 = temp2;
+    }
+
+    if (previous1 && current2) {
+      previous1.next.next = current2;
+    }
+
+    return this;
+  }
 }
 
 let survivalRope = new LinkedList();
