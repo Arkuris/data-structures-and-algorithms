@@ -7,8 +7,9 @@
 - [Link to README Array Insert Shift](./array-insert-shift/README.md)
 - [Link to README Array Binary-Search](./array-binary-search/README.md)
 - [Link to README Linked-List CODE](/linked-list/index.js)
-- [Link to README Linked-List Readme](/linked-list/README.md)
-- [Link to README Linked-List CODE CodeChallange06](/linked-list/index.js)
+- [Link to README Linked-List Readme 05](/linked-list/README.md)
+- [Link to README Linked-List CODE CodeChallange06](/linked-list/README.md)
+- [Link to README Linked-List CODE CodeChallange07](/linked-list/README.md)
 
 ### Folder and Challenge Setup
 
