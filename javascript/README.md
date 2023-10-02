@@ -9,6 +9,7 @@
 - [Link to README Linked-List CODE](/linked-list/index.js)
 - [Link to README Linked-List Readme](/linked-list/README.md)
 - [Link to README Linked-List CODE CodeChallange06](/linked-list/index.js)
+- [Link to README stack-queue-pseudo](./stack-queue-pseudo/index.js)
 
 ### Folder and Challenge Setup
 
