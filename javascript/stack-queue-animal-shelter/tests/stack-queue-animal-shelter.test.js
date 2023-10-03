@@ -1,49 +1,49 @@
 'use strict';
 
-class Animal {
-  constructor(name, species) {
-    if (!['cat', 'dog'].includes(species)) {
-      throw new Error('Animal must be of species "cat" or "dog"');
-    }
-    this.name = name;
-    this.species = species;
-  }
-}
+const { Animal, AnimalShelter } = require('../index.js');
 
-class AnimalShelter {
-  constructor() {
-    this.cats = [];
-    this.dogs = [];
-  }
+describe('Animal class', () => {
+  test('should create a cat', () => {
+    const cat = new Animal('Whiskers', 'cat');
+    expect(cat.name).toBe('Whiskers');
+    expect(cat.species).toBe('cat');
+  });
 
-  enqueue(animal) {
-    if (!(animal instanceof Animal)) {
-      throw new Error('Input must be an instance of Animal');
-    }
+  test('should create a dog', () => {
+    const dog = new Animal('Buddy', 'dog');
+    expect(dog.name).toBe('Buddy');
+    expect(dog.species).toBe('dog');
+  });
 
-    if (animal.species === 'cat') {
-      this.cats.push(animal);
-    } else if (animal.species === 'dogs') {
-      this.dogs.push(animal);
-    } else {
-      throw new Error('Animal species must be "cat" or "dog"');
-    }
-  }
+  test('should throw error for invalid species', () => {
+    expect(() => new Animal('Tweety', 'bird')).toThrow('Animal must be of species "cat" or "dog"');
+  });
+});
 
-  dequeue(pref) {
-    if (pref !== 'cat' && pref !== 'dog') {
-      return null;
-    }
+describe('AnimalShelter class', () => {
+  let shelter;
 
-    if (pref === 'cat') {
-      return this.cats.shift() || null;
-    } else if (pref === 'dog') {
-      return this.dogs.shift() || null;
-    }
-  }
-}
+  beforeEach(() => {
+    shelter = new AnimalShelter();
+  });
 
-const shelter = new AnimalShelter();
-shelter.enqueue(new Animal('Whiskers', 'cat'));
-shelter.enqueue(new Animal('Buddy', 'dog'));
-shelter.enqueue(new Animal('Shadow', 'dog'));
+  test('should enqueue a cat', () => {
+    shelter.enqueue(new Animal('Whiskers', 'cat'));
+    expect(shelter.cats[0].name).toBe('Whiskers');
+  });
+
+  test('should dequeue a cat', () => {
+    shelter.enqueue(new Animal('Whiskers', 'cat'));
+    const dequeuedCat = shelter.dequeue('cat');
+    expect(dequeuedCat.name).toBe('Whiskers');
+  });
+
+  test('should return null for invalid preference', () => {
+    expect(shelter.dequeue('bird')).toBeNull();
+  });
+
+  test('should handle dequeue from empty list', () => {
+    expect(shelter.dequeue('cat')).toBeNull();
+    expect(shelter.dequeue('dog')).toBeNull();
+  });
+});

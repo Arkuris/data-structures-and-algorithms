@@ -11,6 +11,7 @@
 - [Link to README Linked-List CODE Code Challenge 06](/linked-list/index.js)
 - [Link to README Stack-Queue Code Challenge 10](./stack-queue/README.md)
 - [Link to README stack-queue-pseudo Code Challenge 11](./stack-queue-pseudo/index.js)
+- [Link to README Animal Shelter Code Challenge 12](./stack-queue-animal-shelter/README.md)
 
 ### Folder and Challenge Setup
 
