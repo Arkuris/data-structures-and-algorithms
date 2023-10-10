@@ -2,7 +2,7 @@
 - Find the Maximum Value in a Binary Tree
 
 ## Whiteboard Process
-[Whiteboard](./CodeChallenge16.png)
+![Whiteboard](./CodeChallenge16.png)
 
 ## Approach & Efficiency
 - ChatGPT

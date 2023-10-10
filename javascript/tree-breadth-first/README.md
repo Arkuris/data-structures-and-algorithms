@@ -5,7 +5,7 @@
 
 ## Whiteboard Process
 <!-- Embedded whiteboard image -->
-
+![WhiteBoard17](./CodeChallenGe17.png)
 ## Approach & Efficiency
 - ChatGPT, example from CC17 assignment on canvas.
 
