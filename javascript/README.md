@@ -8,14 +8,16 @@
 - [Link to README Array Binary-Search](./array-binary-search/README.md)
 - [Link to README Linked-List CODE](/linked-list/index.js)
 - [Link to README Linked-List Readme](/linked-list/README.md)
+- [Link to README Linked-List Readme 05](/linked-list/README.md)
 - [Link to README Linked-List CODE Code Challenge 06](/linked-list/index.js)
+- [Link to README Linked-List CODE CodeChallange07](/linked-list/README.md)
 - [Link to README Stack-Queue Code Challenge 10](./stack-queue/README.md)
 - [Link to README stack-queue-pseudo Code Challenge 11](./stack-queue-pseudo/index.js)
 - [Link to README Animal Shelter Code Challenge 12](./stack-queue-animal-shelter/README.md)
 - [Link to README tree-max Code Challenge 16](./tree-max/README.md)
 - [Link to README tree-breadth-first Code Challenge 17](./tree-breadth-first/README.md)
 - [Link to README tree-fizz-buzz Code Challenge 18](./tree-fizz-buzz/README.md)
-v
+
 ### Folder and Challenge Setup
 
 Each type of code challenge has slightly different instructions. Please refer to the notes and examples below for instructions for each DS&A assignment type.

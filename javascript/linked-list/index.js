@@ -32,14 +32,36 @@ class LinkedList {
   }
 
   to_string() {
-    let stringRepresentation = "";
+    let stringRepresentation = '';
     let current = this.head;
     while (current) {
       stringRepresentation += `{ ${current.value} } -> `;
       current = current.next;
     }
-    stringRepresentation += "NULL";
+    stringRepresentation += 'NULL';
     return stringRepresentation;
+  }
+
+  kthFromEnd(k) {
+    if (!this.head || k < 0) return null;
+
+    let leadPointer = this.head;
+    let trailPointer = this.head;
+
+    for (let i = 0; i < k; i++) {
+      if (leadPointer.next) {
+        leadPointer = leadPointer.next;
+      } else {
+        return null;
+      }
+    }
+
+    while (leadPointer.next) {
+      leadPointer = leadPointer.next;
+      trailPointer = trailPointer.next;
+    }
+
+    return trailPointer.value;
   }
 
   append(value) {
