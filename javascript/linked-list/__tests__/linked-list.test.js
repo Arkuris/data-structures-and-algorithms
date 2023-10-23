@@ -47,6 +47,7 @@ describe('Linked List', () => {
     list.insertAfter('first', 'second');
     expect(list.to_string()).toBe('{ first } -> { second } -> NULL');
   });
+  
   it('Can successfully zip two linked lists', () => {
     let list1 = new LinkedList();
     list1.append('a1');
@@ -78,4 +79,27 @@ describe('Linked List', () => {
 
     expect(list1.to_string()).toBe('{ a1 } -> { b1 } -> { a2 } -> { b2 } -> { b3 } -> { b4 } -> NULL');
   });
+  
+  it('Can successfully retrieve the kth element from the end of the linked list', () => {
+    let list = new LinkedList();
+    list.append('first');
+    list.append('second');
+    list.append('third');
+    list.append('fourth');
+
+    expect(list.kthFromEnd(0)).toBe('fourth');
+    expect(list.kthFromEnd(1)).toBe('third');
+    expect(list.kthFromEnd(2)).toBe('second');
+    expect(list.kthFromEnd(3)).toBe('first');
+  });
+
+  it('Returns null for out of range k values', () => {
+    let list = new LinkedList();
+    list.append('first');
+    list.append('second');
+
+    expect(list.kthFromEnd(5)).toBeNull(); // k is larger than the length of the list
+    expect(list.kthFromEnd(-1)).toBeNull(); // negative k value
+  });
+
 });
