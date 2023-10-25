@@ -19,6 +19,7 @@
 - [Link to README tree-fizz-buzz Code Challenge 18](./tree-fizz-buzz/README.md)
 - [Link to README insertion-sort Code Challenge 26](./insertion-sort/README.md)
 - [Link to README merge-sort Code Challenge 27](./merge-sort/README.md)
+- [Link to README sorting-comparison Code Challenge 28](./sorting-comparison/README.md)
 
 ### Folder and Challenge Setup
 
