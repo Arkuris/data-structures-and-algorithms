@@ -20,6 +20,7 @@
 - [Link to README insertion-sort Code Challenge 26](./insertion-sort/README.md)
 - [Link to README merge-sort Code Challenge 27](./merge-sort/README.md)
 - [Link to README sorting-comparison Code Challenge 28](./sorting-comparison/README.md)
+- [Link to README hashmap Code Challenge 30](./hashtable/README.md)
 - [Link to README hashmap-repeated-word Code Challenge 31](./hashmap-repeated-word/README.md)
 
 ### Folder and Challenge Setup
